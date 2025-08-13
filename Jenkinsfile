@@ -20,8 +20,7 @@ pipeline {
         stage('Build Docker image') {
             steps {
                 sh """
-                    docker build -t ${DOCKER_IMAGE} \
-                    -f CDexercise/Dockerfile CDexercise
+                    docker build -t ${DOCKER_IMAGE} .
                 """
             }
         }
